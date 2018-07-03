@@ -8,5 +8,6 @@ public class QsMarketingApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(QsMarketingApplication.class, args);
+		
 	}
 }
