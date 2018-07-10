@@ -1,7 +1,9 @@
 package com.qsm.api.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -73,6 +76,13 @@ public class Usuario implements Serializable {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "operadora_id")
 	private Operadora operadora;
+	
+
+
+//	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @JoinColumn(name = "observacao_id") // Esta coluna está na tabela "observacao".
+//	private List<Observacao> observacoes;
+
 
 	public Usuario() {
 	}
@@ -216,4 +226,12 @@ public class Usuario implements Serializable {
 	public void setEnabled(boolean enabled) {
 		Enabled = enabled;
 	}
+
+//	public List<Observacao> getObservacoes() {
+//		return observacoes;
+//	}
+//
+//	public void setObservacoes(List<Observacao> observacoes) {
+//		this.observacoes = observacoes;
+//	}
 }

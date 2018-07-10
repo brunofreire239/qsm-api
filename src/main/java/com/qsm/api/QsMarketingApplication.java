@@ -10,15 +10,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.qsm.api.entities.Empresa;
-import com.qsm.api.repositories.EmpresaRepository;
+import com.qsm.api.entities.Observacao;
+import com.qsm.api.repositories.ObservacaoRepository;
 import com.qsm.api.services.EmpresaService;
 
 @SpringBootApplication
 public class QsMarketingApplication {
 
 	@Autowired
-	private EmpresaRepository empresaRepository;
+	private ObservacaoRepository empresaRepository;
 	
 	@Autowired
 	private EmpresaService empresaService;

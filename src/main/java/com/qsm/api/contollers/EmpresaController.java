@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.qsm.api.dtos.EmpresaDto;
 import com.qsm.api.responses.Response;
-
-@RestController
-@RequestMapping("/api/empresa")
+//
+//@RestController
+//@RequestMapping("/api/empresa")
 public class EmpresaController {
 
 	@GetMapping(value="/{nome}")
