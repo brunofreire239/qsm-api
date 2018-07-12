@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="observacao")
-public class Observacao implements Serializable{
+public class Motoqueiro implements Serializable{
 	
 	private static final long serialVersionUID = 6880727368740915667L;
 	
@@ -25,54 +25,36 @@ public class Observacao implements Serializable{
 	@Column(name = "id", nullable = false)
 	private Long id;
 	
-	@Column(name="nome_criador")
-	private String nomeCriador;
-	
-	@Column
-	private String texto;
-	
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "user_id")
-//	private Usuario usuario;
+	@Column(name="name")
+	private String name;
 
-
+	@Column(columnDefinition="tinyint(1) default 1")
+	private boolean enabled;
+	
 	public Long getId() {
 		return id;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
-	public String getNomeCriador() {
-		return nomeCriador;
+	public String getName() {
+		return name;
 	}
 
-
-	public void setNomeCriador(String nomeCriador) {
-		this.nomeCriador = nomeCriador;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-
-	public String getTexto() {
-		return texto;
+	public boolean isEnabled() {
+		return enabled;
 	}
 
-
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
-
-//	public Usuario getUsuario() {
-//		return usuario;
-//	}
-//
-//
-//	public void setUsuario(Usuario usuario) {
-//		this.usuario = usuario;
-//	}	
-//	
+	
+	
 }

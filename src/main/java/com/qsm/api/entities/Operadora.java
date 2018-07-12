@@ -25,7 +25,7 @@ public class Operadora {
 	private String name;
 
 	@Column(columnDefinition="tinyint(1) default 1")
-	private boolean Enabled;
+	private boolean enabled;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Usuario> usuarios;
@@ -54,17 +54,14 @@ public class Operadora {
 		this.usuarios = usuarios;
 	}
 
-	public boolean getEnabled() {
-		return Enabled;
+	public boolean isEnabled() {
+		return enabled;
 	}
 
-	public void isEnabled(boolean enabled) {
-		Enabled = enabled;
-	}
-	
 	public void setEnabled(boolean enabled) {
-		Enabled = enabled;
+		this.enabled = enabled;
 	}
+
 
 
 }
